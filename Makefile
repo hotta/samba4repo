@@ -7,7 +7,7 @@
 #
 #	Set up local 
 
-#REOBASEE=http://localhost
+E=http://localhost
 REPOBASE=file://$(PWD)
 
 # RHEL 7 needs compat-nettle32-3.x, which uses epel-7-x86_64
@@ -26,7 +26,7 @@ SAMBAPKGS+=libtevent-0.10.x-srpm
 SAMBAPKGS+=compat-gnutls34-3.x-srpm
 
 # Also requires libtevent
-SAMBAPKGS+=libldb-2.2.x-srpm
+SAMBAPKGS+=libldb-2.1.x-srpm
 
 # RHEL 8 dependency for libtomcrypt
 SAMBAPKGS+=libtommath-1.0.x-srpm
