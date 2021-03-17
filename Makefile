@@ -56,7 +56,7 @@ CFGS+=samba4repo-amz2-x86_64.cfg
 
 # Link from /etc/mock
 MOCKCFGS+=epel-7-x86_64.cfg
-MOCKCFGS+=centos-stream-x86_64.cfg
+MOCKCFGS+=centos-stream-8-x86_64.cfg
 MOCKCFGS+=fedora-33-x86_64.cfg
 MOCKCFGS+=amazonlinux-2-x86_64.cfg
 
@@ -140,10 +140,10 @@ samba4repo-7-x86_64.cfg: /etc/mock/epel-7-x86_64.cfg
 	@echo 'priority=5' >> $@
 	@echo '"""' >> $@
 
-samba4repo-8-x86_64.cfg: /etc/mock/centos-stream-x86_64.cfg
+samba4repo-8-x86_64.cfg: /etc/mock/centos-stream-8-x86_64.cfg
 	@echo Generating $@ from $?
 	@cat $? > $@
-	@sed -i 's/centos-stream-x86_64/samba4repo-8-x86_64/g' $@
+	@sed -i 's/centos-stream-8-x86_64/samba4repo-8-x86_64/g' $@
 	@echo >> $@
 	@echo "Disabling 'best=' for $@"
 	@sed -i '/^best=/d' $@
